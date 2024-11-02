@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "5b90764c-b91b-4aee-9efd-5cbc71ba7828",
+		"name": "QP-GROCERY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13681148"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"vishal\",\r\n    \"username\":\"vish\",\r\n    \"number\":9639330836,\r\n    \"address\":\"India\",\r\n    \"role\":\"Admin\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"vish\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grocery Details",
+			"item": [
+				{
+					"name": "GetAllGrocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIiwiaWF0IjoxNzMwNDgwODEyLCJleHAiOjE3MzA0ODQ0MTJ9.1QtI4rOuGsZXhrEskYFL42XiVf6YDtjHVjKpU51XLieAFhiIiC10Q9RD9AykTAzyZ9-MoW_xktLNaYa_cvJzow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/grocery/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"grocery",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get grocery by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIiwiaWF0IjoxNzMwNDczNjIxLCJleHAiOjE3MzA0NzcyMjF9.9SkkjR6VnG7qG657EtXeeb6zAfJV0isFKWn_j5_W7NY1mPEYdCNLh7_XzFGmDrIabALURkRN00s7zVFV7CisuQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/grocery/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"grocery",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIiwiaWF0IjoxNzMwNTQzMDM1LCJleHAiOjE3MzA1NDY2MzV9.c5UjJONhWdU_eU4EM_eK__nK_NMW1DJ80-_E5H8uqmWZbb-rxYN14G2eyfLiJVXN1JIZhVNTOLz1YaF_GmuzhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Milk\",\r\n    \"price\":26,\r\n    \"quantity\":28\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/grocery/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"grocery",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIiwiaWF0IjoxNzMwNDgwODEyLCJleHAiOjE3MzA0ODQ0MTJ9.1QtI4rOuGsZXhrEskYFL42XiVf6YDtjHVjKpU51XLieAFhiIiC10Q9RD9AykTAzyZ9-MoW_xktLNaYa_cvJzow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"milk\",\r\n    \"price\":26,\r\n    \"quantity\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/grocery/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"grocery",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIiwiaWF0IjoxNzMwNDczNjIxLCJleHAiOjE3MzA0NzcyMjF9.9SkkjR6VnG7qG657EtXeeb6zAfJV0isFKWn_j5_W7NY1mPEYdCNLh7_XzFGmDrIabALURkRN00s7zVFV7CisuQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/grocery/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"grocery",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get Available Grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIHVzZXIiLCJpYXQiOjE3MzA1NDMwNjksImV4cCI6MTczMDU0NjY2OX0.Q7utYOPaHBHDjyYmW0_iuae0xEuubk8_2VLwuXZrq_JKcORimhfSKs9vSMUOxnWij4V08mGMlQDIKtP2rPG0UQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/order/available-grocery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order",
+								"available-grocery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aXNoIHVzZXIiLCJpYXQiOjE3MzA1NDMwNjksImV4cCI6MTczMDU0NjY2OX0.Q7utYOPaHBHDjyYmW0_iuae0xEuubk8_2VLwuXZrq_JKcORimhfSKs9vSMUOxnWij4V08mGMlQDIKtP2rPG0UQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groceries\":[\r\n        {\r\n            \"groceryId\":1,\r\n            \"quantity\":25\r\n        },\r\n        {\r\n            \"groceryId\":2,\r\n            \"quantity\":26\r\n        }\r\n        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/order/place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
